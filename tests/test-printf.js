@@ -3,7 +3,7 @@ var libdtrace = require('libdtrace');
 var assert = require('assert');
 
 dtp = new libdtrace.Consumer();
-dtp.strcompile('BEGIN { printf("{ foo: %d", 123); printf(", bar: %d", 456); }'); 
+dtp.strcompile('BEGIN { printf("{ foo: %d", 123); printf(", bar: %d", 456); }');
 
 dtp.go();
 

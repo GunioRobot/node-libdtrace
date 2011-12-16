@@ -61,5 +61,5 @@ setInterval(function () {
 	if (seconds >= end) {
 		delete dtp;
 		dtp = undefined;
-	}	
+	}
 }, 10);

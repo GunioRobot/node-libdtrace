@@ -501,7 +501,7 @@ DTraceConsumer::consume(const dtrace_probedata_t *data,
 
 	if (!dtc->valid(rec)) {
 		char errbuf[256];
-	
+
 		/*
 		 * If this is a printf(), we'll defer to the bufhandler.
 		 */
@@ -512,7 +512,7 @@ DTraceConsumer::consume(const dtrace_probedata_t *data,
 		    "in record for %s:%s:%s:%s\n",
 		    dtc->action(rec, errbuf, sizeof (errbuf)),
 		    pd->dtpd_provider, pd->dtpd_mod,
-		    pd->dtpd_func, pd->dtpd_name);	
+		    pd->dtpd_func, pd->dtpd_name);
 		return (DTRACE_CONSUME_ABORT);
 	}
 
@@ -764,7 +764,7 @@ DTraceConsumer::aggwalk(const dtrace_aggdata_t *agg, void *arg)
 		Local<Array> *ranges, datum;
 		int i, j = 0;
 
-		ranges = dtc->ranges_quantize(aggdesc->dtagd_varid); 
+		ranges = dtc->ranges_quantize(aggdesc->dtagd_varid);
 
 		for (i = 0; i < DTRACE_QUANTIZE_NBUCKETS; i++) {
 			if (!data[i])
@@ -888,7 +888,7 @@ DTraceConsumer::Version(const Arguments& args)
 }
 
 extern "C" void
-init (Handle<Object> target) 
+init (Handle<Object> target)
 {
 	DTraceConsumer::Initialize(target);
 }
